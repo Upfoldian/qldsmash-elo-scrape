@@ -10,8 +10,6 @@ results = results["players"]
 
 results = results.select {|player| player["region"] == "New South Wales"}
 
-results = results.select {|player| ARGV.include?(player["name"])}
-
 results.each do |player|
 
 	player["resultData"] = player["resultData"].select do |result| 
@@ -21,7 +19,7 @@ results.each do |player|
 	end
 end
 
-puts "Target Date: #{ARGV[0]}, Players #{ARGV[1..-1]}\n"
+puts "Target Date: #{ARGV[0]}, Players: NSW"
 results.each do |player|
 	puts "Player Name: #{player['name']}"
 	puts "\tBeat:"
