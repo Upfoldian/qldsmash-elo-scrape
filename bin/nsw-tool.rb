@@ -8,7 +8,7 @@ results = JSON.parse(File.read('dump.json'))
 
 results = results["players"]
 
-results = results.select {|player| player["region"] == "New South Wales"}
+results = results.select {|player| player["region"] == "New Zealand"}
 
 results.each do |player|
 
